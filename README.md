@@ -2,6 +2,8 @@
 
 This repository provides the prototypical implementation for the change extraction, change propagation, incremental model update, and adaptive instrumentation of the [CIPM approach](https://sdq.kastel.kit.edu/wiki/CIPM).
 
+Data for papers can be found in the `data` folder. In particular, there is a folder `Vitruv` with initial results for CIPM's application on Vitruv. It contains the the actual extracted Java Model (`models/VitruvSCMReducedV1.javaxmi`) and the resulting PCM Repository model (`models/PCMRepositoryV1.repository`). Additionally, it includes a first UML component diagram (`arch/vitruv-archV1`), a derived version with incorporated feedback (`arch/vitruv-archV2`), and the diff between both versions (`arch/vitruv-arch-V1-V2-diff`).
+
 # Setup
 
 This project requires Java 11 for all actions. In particular, if a script is executed in the following, it usually uses Maven to build projects. As a result, the `JAVA_HOME` environment variable must be set, pointing to a JDK 11 (the top-level JDK directory, not the `bin` folder so that Maven can find the Java executable in `%JAVA_HOME%\bin\java.exe`). Additionally, any script must be executed from the top-level directory of this repository (and not within the `scripts` directory).

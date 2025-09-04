@@ -1,0 +1,121 @@
+digraph  {
+    layout=twopi;
+    overlap=scalexy;
+    node [shape=component];
+    edge [arrowhead=icurve];
+    Vitruv_DSLs_common;
+    Vitruv_DSLs_commonalities_language;
+    Vitruv_DSLs_commonalities_runtime;
+    Vitruv_DSLs_reactions_language;
+    Vitruv_Change_testutils_metamodels;
+    Vitruv_DSLs_testutils;
+    Vitruv_DSLs_commonalities_runtime_operators;
+    Vitruv_Change_correspondence;
+    Vitruv_Change_utils;
+    Vitruv_DSLs_reactions_runtime;
+    Vitruv_DSLs_commonalities_testutils;
+    Vitruv_DSLs_reactions_ide;
+    Vitruv_Change_atomic;
+    Vitruv_Change_composite;
+    Vitruv_Change_interaction;
+    Vitruv_Change_changederivation;
+    Vitruv_Change_interaction_model;
+    Vitruv_Change_propagation;
+    Vitruv_Change_testutils_changevisualization;
+    Vitruv_Change_testutils_core;
+    Vitruv_Change_testutils_integration;
+    Vitruv_applications;
+    Vitruv_testutils_deprecated;
+    Vitruv_views;
+    Vitruv_testutils_integration;
+    Vitruv_vsum;
+    Vitruv_Change_correspondenceProv [shape=circle,label="",height=0.2];
+    Vitruv_Change_correspondence -> Vitruv_Change_correspondenceProv [arrowhead=none];
+    Vitruv_DSLs_reactions_runtimeProv [shape=circle,label="",height=0.2];
+    Vitruv_DSLs_reactions_runtime -> Vitruv_DSLs_reactions_runtimeProv [arrowhead=none];
+    Vitruv_Change_propagationProv [shape=circle,label="",height=0.2];
+    Vitruv_Change_propagation -> Vitruv_Change_propagationProv [arrowhead=none];
+    Vitruv_DSLs_testutilsProv [shape=circle,label="",height=0.2];
+    Vitruv_DSLs_testutils -> Vitruv_DSLs_testutilsProv [arrowhead=none];
+    Vitruv_DSLs_reactions_languageProv [shape=circle,label="",height=0.2];
+    Vitruv_DSLs_reactions_language -> Vitruv_DSLs_reactions_languageProv [arrowhead=none];
+    Vitruv_Change_testutils_changevisualizationProv [shape=circle,label="",height=0.2];
+    Vitruv_Change_testutils_changevisualization -> Vitruv_Change_testutils_changevisualizationProv [arrowhead=none];
+    Vitruv_Change_utilsProv [shape=circle,label="",height=0.2];
+    Vitruv_Change_utils -> Vitruv_Change_utilsProv [arrowhead=none];
+    Vitruv_Change_testutils_metamodelsProv [shape=circle,label="",height=0.2];
+    Vitruv_Change_testutils_metamodels -> Vitruv_Change_testutils_metamodelsProv [arrowhead=none];
+    Vitruv_DSLs_commonProv [shape=circle,label="",height=0.2];
+    Vitruv_DSLs_common -> Vitruv_DSLs_commonProv [arrowhead=none];
+    Vitruv_DSLs_commonalities_runtimeProv [shape=circle,label="",height=0.2];
+    Vitruv_DSLs_commonalities_runtime -> Vitruv_DSLs_commonalities_runtimeProv [arrowhead=none];
+    Vitruv_Change_interactionProv [shape=circle,label="",height=0.2];
+    Vitruv_Change_interaction -> Vitruv_Change_interactionProv [arrowhead=none];
+    Vitruv_Change_atomicProv [shape=circle,label="",height=0.2];
+    Vitruv_Change_atomic -> Vitruv_Change_atomicProv [arrowhead=none];
+    Vitruv_Change_compositeProv [shape=circle,label="",height=0.2];
+    Vitruv_Change_composite -> Vitruv_Change_compositeProv [arrowhead=none];
+
+
+    Vitruv_DSLs_commonalities_language -> Vitruv_DSLs_commonProv;
+    Vitruv_DSLs_commonalities_language -> Vitruv_DSLs_commonalities_runtimeProv;
+    Vitruv_DSLs_commonalities_language -> Vitruv_DSLs_testutilsProv;
+    Vitruv_DSLs_commonalities_language -> Vitruv_Change_testutils_metamodelsProv;
+    Vitruv_DSLs_commonalities_language -> Vitruv_DSLs_reactions_languageProv;
+
+    Vitruv_DSLs_commonalities_runtime -> Vitruv_Change_correspondenceProv;
+    Vitruv_DSLs_commonalities_runtime -> Vitruv_DSLs_reactions_runtimeProv;
+
+    Vitruv_DSLs_reactions_language -> Vitruv_DSLs_commonProv;
+    Vitruv_DSLs_reactions_language -> Vitruv_DSLs_testutilsProv;
+    Vitruv_DSLs_reactions_language -> Vitruv_Change_atomicProv;
+    Vitruv_DSLs_reactions_language -> Vitruv_Change_testutils_metamodelsProv;
+
+
+
+
+
+
+    Vitruv_DSLs_reactions_runtime -> Vitruv_Change_correspondenceProv;
+    Vitruv_DSLs_reactions_runtime -> Vitruv_Change_atomicProv;
+    Vitruv_DSLs_reactions_runtime -> Vitruv_Change_utilsProv;
+
+
+    Vitruv_DSLs_reactions_ide -> Vitruv_DSLs_reactions_languageProv;
+
+
+    Vitruv_Change_composite -> Vitruv_Change_atomicProv;
+    Vitruv_Change_composite -> Vitruv_Change_interactionProv;
+
+
+    Vitruv_Change_changederivation -> Vitruv_Change_atomicProv;
+
+    Vitruv_Change_interaction_model -> Vitruv_Change_interactionProv;
+
+    Vitruv_Change_propagation -> Vitruv_Change_correspondenceProv;
+    Vitruv_Change_propagation -> Vitruv_Change_propagationProv;
+    Vitruv_Change_propagation -> Vitruv_Change_atomicProv;
+    Vitruv_Change_propagation -> Vitruv_Change_compositeProv;
+    Vitruv_Change_propagation -> Vitruv_Change_testutils_changevisualizationProv;
+
+    Vitruv_Change_testutils_changevisualization -> Vitruv_Change_propagationProv;
+    Vitruv_Change_testutils_changevisualization -> Vitruv_Change_atomicProv;
+    Vitruv_Change_testutils_changevisualization -> Vitruv_Change_testutils_changevisualizationProv;
+
+
+    Vitruv_Change_testutils_integration -> Vitruv_Change_propagationProv;
+
+
+
+    Vitruv_views -> Vitruv_Change_propagationProv;
+    Vitruv_views -> Vitruv_Change_atomicProv;
+    Vitruv_views -> Vitruv_Change_compositeProv;
+
+
+    Vitruv_vsum -> Vitruv_Change_correspondenceProv;
+    Vitruv_vsum -> Vitruv_Change_atomicProv;
+    Vitruv_vsum -> Vitruv_Change_compositeProv;
+    Vitruv_vsum -> Vitruv_Change_testutils_changevisualizationProv;
+
+
+}
